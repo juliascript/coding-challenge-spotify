@@ -134,7 +134,7 @@ module.exports = function(app) {
 
 		if (personIndex === null) {
 			// create a new user with this uid and req.body
-			var person = createNewUser(req.body);
+			var person = createNewUser(req.query);
 
 			// update uid to the one specified in the path
 			person.uid = Number(uid);
