@@ -64,7 +64,7 @@ module.exports = function(app) {
 		// all users
 		
 		if (!db['users']){
-			return res.status(204);
+			res.render('204');
 		} 
 		var people = db['users']; 
 		// return all users 
@@ -73,7 +73,9 @@ module.exports = function(app) {
 	});
 
 	app.post('/people', urlencodedParser, function(req, res) {
-		if (!req.body) return res.status(400);
+		if (!req.body) {
+			res.render('400');
+		}
 
 		var person = createNewUser(req.body);
 		db.users.push(person);
@@ -86,7 +88,9 @@ module.exports = function(app) {
 	});
 
 	app.post('/api/people', jsonParser, function(req, res) {
-		if (!req.body) return res.status(400);
+		if (!req.body) {
+			res.render('400');
+		}
 
 		var person = createNewUser(req.body);
 		
@@ -105,7 +109,7 @@ module.exports = function(app) {
 
 	app.get('/people/:uid', function(req, res) {
 		if (db['users'].length == 0){
-			return res.status(404);
+			res.render('404');
 		}
 
 		var uid = req.params.uid;
@@ -114,7 +118,7 @@ module.exports = function(app) {
 		var personIndex = binarySearchUsers(uid);
 
 		if (personIndex === null) {
-			return res.status(404);
+			res.render('404');
 		}
 
 		var person = db['users'][personIndex];
@@ -153,7 +157,7 @@ module.exports = function(app) {
 
 	app.delete('/people/:uid', function(req, res) {
 		if (!db['users']){
-			return res.status(204);
+			res.render('204');
 		}
 
 		var uid = req.params.uid;
@@ -162,7 +166,7 @@ module.exports = function(app) {
 		var personIndex = binarySearchUsers(uid);
 
 		if (personIndex === null) {
-			return res.status(404); // should this be 400?
+			res.render('404'); // should this be 400?
 		}
 
 		var person = db['users'][personIndex];
