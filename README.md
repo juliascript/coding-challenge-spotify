@@ -1,6 +1,4 @@
-Take-home Challenge
-Deadline: Saturday, March 25 at 11:59pm
-Submission Info: Following the instructions below, applicants must submit final materials to team@techtalentpipeline.nyc 
+
 
 To complete this question you will need to write both a client and a server. We are agnostic to how you design the client (mobile web, iOS, Android, desktop web) but it will need to be able to make HTTP requests to a specific endpoints.  The server you create will also need to be able to respond to HTTP requests to specific endpoints.  It is not important what language or framework you use to build your server.
 
