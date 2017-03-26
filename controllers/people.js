@@ -151,6 +151,8 @@ module.exports = function(app) {
 			db['users'][personIndex] = req.body;
 			db['users'][personIndex]['uid'] = uid;
 
+			person = db['users'][personIndex];
+
 			res.status(200).send(JSON.stringify(person));
 		}
 	});
