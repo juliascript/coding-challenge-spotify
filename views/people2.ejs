@@ -1,0 +1,52 @@
+<html> 
+
+<head>
+	<link href="/assets/style.css" type="text/css" rel="stylesheet">
+</head>
+
+
+<body>
+	<p> POST /people </p>
+	<form method="POST" action="/people">
+		Name: <input type="text" id="name" name="firstName"></input> <br />
+		Favorite City: <input type="text" id="favoriteCity" name="favoriteCity"></input> <br /><br />
+		<input type="submit" value="Submit" />
+	</form>
+	<p>----------------------------</p>
+	
+	<p> PUT /people/1 </p>
+	<form method="PUT" action="/people/1">
+		Name: <input type="text" id="name" name="firstName"></input> <br />
+		Favorite City: <input type="text" id="favoriteCity" name="favoriteCity"></input> <br /><br />
+		<input type="submit" value="Submit" />
+	</form>
+	<p>----------------------------</p>
+
+	<p> GET /people </p>
+	<form method="GET" action="/people/">
+		<input type="submit" value="Submit" />
+	</form>
+	<p>----------------------------</p>
+
+	<p> GET /people/1 </p>
+	<form method="GET" action="/people/1">
+		<input type="submit" value="Submit" />
+	</form>
+	<p>----------------------------</p>
+
+	<p> GET /people/lastCreated </p>
+	<form method="GET" action="/people/lastCreated">
+		<input type="submit" value="Submit" />
+	</form>
+	<p>----------------------------</p>
+
+	<p> DELETE /people/1 </p>
+	<form method="DELETE" action="/people/1">
+		<input type="submit" value="Submit" />
+	</form>
+	
+
+
+</body> 
+
+</html>
